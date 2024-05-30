@@ -21,13 +21,13 @@ router.get("/create", (req, res) => {
   });
 
 router.post("/create", (req, res) => {
-    Movie.create(req.body)
+    Celebrity.create(req.body)
     .then(() => {
         res.redirect("/celebrities");
     })
     .catch((error) => {
         console.log(error);
-        res.render("celebrities/new-celebrity")
+        res.render("celebrities/new-celebrity");
     });
   });
   
